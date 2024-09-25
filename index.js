@@ -49,7 +49,7 @@ app.use('/', require('./routes/authRoutes'));
 
 // Image upload endpoint
 app.post('/upload', upload.single('image'), (req, res) => {
-    res.json({ imageUrl: `https://ragardweb-backend.onrender.com/:8000/uploads/${req.file.filename}` });
+    res.json({ imageUrl: `https://ragardweb-backend.onrender.com/uploads/${req.file.filename}` });
 });
 
 const activeUsers = new Set();
