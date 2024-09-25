@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5173',
+        origin: 'https://ragardweb.onrender.com',
         methods: ['GET', 'POST'],
         credentials: true
     }
@@ -49,7 +49,7 @@ app.use('/', require('./routes/authRoutes'));
 
 // Image upload endpoint
 app.post('/upload', upload.single('image'), (req, res) => {
-    res.json({ imageUrl: `http://localhost:8000/uploads/${req.file.filename}` });
+    res.json({ imageUrl: `https://ragardweb-backend.onrender.com/:8000/uploads/${req.file.filename}` });
 });
 
 const activeUsers = new Set();
