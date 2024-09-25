@@ -9,7 +9,7 @@ const { getChatHistory } = require('../controllers/chatController');
 router.use(
     cors({
         credentials: true,
-        origin: 'https://ragardweb.onrender.com/'})
+        origin: 'https://ragard.onrender.com'})
 );
 
 router.get('/chatHistory', getChatHistory);
